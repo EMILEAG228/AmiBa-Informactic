@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accès aux Cours C</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <div class="container my-5" id="registration-form">
+        <h2>Veuillez vous inscrire</h2>
+        <form id="userForm">
+            <div class="form-group">
+                <label for="name">Nom :</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="country">Pays :</label>
+                <input type="text" class="form-control" id="country" required>
+            </div>
+            <div class="form-group">
+                <label for="contact">Contact :</label>
+                <input type="text" class="form-control" id="contact" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Soumettre</button>
+        </form>
+    </div>
+
+    <div class="container my-5" id="content" style="display:none;">
+        <header class="bg-dark text-white text-center py-5">
+            <h1>Apprenez le C</h1>
+            <p>Téléchargez des exemples de code pour pratiquer vos compétences en C</p>
+        </header>
+        <br>
+
+        <h2 class="mb-4" style="text-align: center;"  ><br>Exemples de Codes C</h2>
+        <br>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="6.jpg" class="card-img-top" alt="Exemple de code 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Code 1 :  Bulletin Etudiants</h5>
+                        <p class="card-text"><p>Je souhaite développer un programme en C pour gérer les bulletins de notes des étudiants. Ce programme devra permettre d'enregistrer les informations personnelles des étudiants (nom, prénom, matricule, classe), de saisir leurs notes pour différentes matières, de calculer les moyennes (par matière et générale), d'afficher les bulletins de manière claire et concise, et de sauvegarder les données dans un fichier pour une utilisation ultérieure. Il serait également intéressant d'implémenter des fonctionnalités de recherche (par nom, matricule) et de gestion des erreurs. Je suis particulièrement intéressé par l'utilisation de structures en C pour représenter les étudiants et des fichiers pour stocker les données de manière persistante. Pourriez-vous me fournir un exemple de code pour les fonctions d'ajout d'un étudiant, de saisie des notes et d'affichage du bulletin ?</p></p>
+                        <button class="btn btn-primary" onclick="download('code1.c')">Télécharger</button>
+                        <button class="btn btn-primary" onclick="download('BULLETIN ETUDIANT.exe')">Télécharger Exe Gratuit</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="7.jpg" class="card-img-top" alt="Exemple de code 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Code 2 : Matrice</h5>
+                        <p class="card-text"><p>Ce code C implémente une bibliothèque de fonctions pour manipuler des matrices à coefficients réels. Les opérations disponibles incluent la création de matrices, l'accès et la modification d'éléments, l'addition, la soustraction, la multiplication, la transposition, le calcul du déterminant et la résolution de systèmes linéaires par la méthode de Gauss. Le code est optimisé pour de grandes matrices et utilise des techniques de programmation défensive pour éviter les erreurs d'exécution.</p></p>
+                        <button class="btn btn-primary" onclick="download('code2.c')">Télécharger(Ce code a des beug qui doit etre Corriger , mais la version qui travaille sur le site de Java)  </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="8.jpg" class="card-img-top" alt="Exemple de code 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Jeu de Deviner le Nombre</h5>
+                        <p class="card-text">Un petit jeu pour deviner un nombre aléatoire.
+                            <br><br><br>
+                            <pre>
+                                #include <stdio.h>
+                                    #include <stdlib.h>
+                                    #include <time.h>
+                                    
+                                    int main() {
+                                        int nombreMystere, nombreSaisi, essais = 0;
+                                    
+                                        // Initialisation du générateur de nombres aléatoires
+                                        srand(time(NULL));
+                                    
+                                        // Choix d'un nombre aléatoire entre 1 et 100
+                                        nombreMystere = rand() % 100 + 1;
+                                    
+                                        printf("Bienvenue dans le jeu du nombre mystère !\n");
+                                        printf("Trouvez le nombre entre 1 et 100.\n");
+                                    
+                                        do {
+                                            printf("Saisissez votre proposition : ");
+                                            scanf("%d", &nombreSaisi);
+                                            essais++;
+                                    
+                                            if (nombreSaisi < nombreMystere) {
+                                                printf("C'est plus !\n");
+                                            } else if (nombreSaisi > nombreMystere) {
+                                                printf("C'est moins !\n");
+                                            } else {
+                                                printf("Félicitations ! Vous avez trouvé le nombre mystère en %d essais.\n", essais);
+                                            }
+                                        } while (nombreSaisi != nombreMystere);
+                                    
+                                        return 0;
+                                    }
+                            </pre>
+                        </p>
+                        <button class="btn btn-primary" onclick="download('#')">Télécharger</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="1.jpg" class="card-img-top" alt="Exemple de code 2">
+                    <div class="card-body">
+                        <h5 class="card-title">TOUS LES CODES C DU STORE</h5>
+                        <p class="card-text"><p>Le C est un langage de programmation puissant et polyvalent. Il est utilisé pour développer des systèmes d'exploitation, des jeux vidéo et bien d'autres applications. Apprendre le C vous donnera une solide base en programmation et vous permettra de comprendre comment fonctionnent les ordinateurs à un niveau bas.
+                            <br><br>
+                            Pour Avoir ce code , Vous devez contacter le Proprietaire...
+                        </p></p>
+                        <button class="btn btn-primary" onclick="download('@Coding C.rar')">Télécharger  </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center py-4">
+        <p>© 2024 by EMILE-AG</p>
+    </footer>
+
+    <script>
+        document.getElementById("userForm").onsubmit = function(event) {
+            event.preventDefault();
+            const name = document.getElementById("name").value;
+            const country = document.getElementById("country").value;
+            const contact = document.getElementById("contact").value;
+
+            const userInfo = { name, country, contact };
+            localStorage.setItem('userInfo', JSON.stringify(userInfo));
+
+            document.getElementById("registration-form").style.display = "none";
+            document.getElementById("content").style.display = "block";
+        };
+
+        function download(filename) {
+            const link = document.createElement('a');
+            link.href = filename; // Lien vers le fichier à télécharger
+            link.download = filename; // Nom du fichier
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>

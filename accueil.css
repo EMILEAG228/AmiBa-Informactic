@@ -1,0 +1,173 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif ;
+}
+h1{
+    text-align: center;
+   // background-color: aqua;
+    text-decoration: solid;
+    text-shadow: none;
+    text-decoration: dashed;
+    text-transform: capitalize;
+    text-overflow: clip;
+    color: red;
+    border-radius: 8px;
+    overflow: hidden;
+    
+}
+h1.al{
+    color: red;
+    background-color: #fff;
+}
+.p{
+    background-image: url("7.jpg");width=34%;height=30%;
+}
+h2{
+    color: aliceblue;
+}
+body{
+    //display : flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh;
+ background-image: url("6.jpg");
+}
+/* Style de base pour la navigation */
+nav {
+    background-color: #333; /* Couleur de fond */
+    color: #fff; /* Couleur du texte */
+    padding: 10px 0; /* Marge interne */
+    text-align: center; /* Aligner le texte au centre */
+}
+
+/* Style pour la liste non ordonnée */
+ul {
+    list-style: none; /* Supprimer les puces par défaut */
+    margin: 0; /* Supprimer la marge par défaut */
+    padding: 0; /* Supprimer le padding par défaut */
+}
+
+/* Style pour les éléments de la liste (liens) */
+li {
+    display: inline-block; /* Afficher les éléments en ligne */
+    margin-right: 20px; /* Marge entre les liens */
+}
+
+/* Style pour les liens (a) */
+a {
+    color: #fff; /* Couleur du texte */
+    text-decoration: none; /* Supprimer le soulignement par défaut */
+    font-weight: bold; /* Gras */
+}
+
+/* Style pour le lien actif (en survol) */
+a:hover {
+    color: #007bff; /* Couleur du texte en survol */
+}
+
+/* Style responsive pour les petits écrans */
+@media (max-width: 768px) {
+    nav {
+        text-align: left; /* Aligner le texte à gauche sur les petits écrans */
+    }
+
+    ul {
+        margin-bottom: 15px; /* Ajouter une marge inférieure sur les petits écrans */
+    }
+
+    li {
+        margin-right: 15px; /* Réduire la marge entre les liens sur les petits écrans */
+    }}
+.box{
+    border-radius: 8px;
+}
+@media queri{
+
+}
+@media screen {
+    
+}
+/* Style de base */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Styles pour le titre et le paragraphe */
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.p {
+    padding: 0 20px;
+}
+
+h2 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Marquee */
+marquee {
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .p {
+        padding: 0 10px;
+    }
+    
+    h1, h2 {
+        font-size: 1.5em;
+    }
+    
+    marquee img {
+        max-width: 100%; /* Assure que l'image ne déborde pas */
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2 {
+        font-size: 1.2em;
+    }
+    
+    nav ul li {
+        margin: 5px 0;
+    }
+}

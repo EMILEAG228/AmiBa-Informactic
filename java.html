@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accès aux Cours Java</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="emile.json">
+</head>
+<body>
+    <div class="container my-5" id="registration-form">
+        <h2>Veuillez vous inscrire</h2>
+        <form id="userForm">
+            <div class="form-group">
+                <label for="name">Nom :</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="country">Pays :</label>
+                <input type="text" class="form-control" id="country" required>
+            </div>
+            <div class="form-group">
+                <label for="contact">Contact :</label>
+                <input type="text" class="form-control" id="contact" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Soumettre</button>
+        </form>
+    </div>
+
+    <div class="container my-5" id="content" style="display:none;">
+        <header class="bg-dark text-white text-center py-5">
+            <h1>Apprenez le Java</h1>
+            <p>Téléchargez des exemples de code pour pratiquer vos compétences en Java</p>
+        </header>
+        <br>
+        <h2 class="mb-4" style="text-align: center;" >Exemples de Codes Java</h2>
+        <br>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="7.jpg" class="card-img-top" alt="Exemple de code 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Code Sur Les Matrices et Resolution Equition a 4 Inconnues</h5>
+                        <p class="card-text">Qu'est-ce qu'une matrice en Java ?
+
+                            En Java, une matrice est une structure de données qui permet de stocker un ensemble d'éléments de même type dans un tableau à plusieurs dimensions. On peut la voir comme une grille où chaque case contient une valeur. Les matrices sont très utiles pour représenter des données tabulaires, des images, des jeux, etc.</p>
+                        <button class="btn btn-primary" onclick="download('matrice.rar')">Télécharger(Payant) </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="6.jpg" class="card-img-top" alt="Exemple de code 3">
+                    <div class="card-body">
+                        <h5 class="card-title">TOUS LES CODES JAVA DU STROES  </h5>
+                        <p class="card-text">Java offre une plateforme de développement mature avec une vaste bibliothèque de classes. Il est particulièrement adapté pour les applications d'entreprise grâce à sa gestion de la mémoire, sa sécurité et sa portabilité. Son écosystème riche en outils et frameworks facilite le développement d'applications complexes.</p>
+
+                        <button class="btn btn-primary" onclick="download('Java Programme Installtion.rar')">Télécharger (Payant) </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center py-4">
+        <p>© 2024 by EMILE-AG</p>
+    </footer>
+    <script>
+        document.getElementById("userForm").onsubmit = function(event) {
+            event.preventDefault();
+            const name = document.getElementById("name").value;
+            const country = document.getElementById("country").value;
+            const contact = document.getElementById("contact").value;
+
+            const userInfo = { name, country, contact };
+            localStorage.setItem('userInfo', JSON.stringify(userInfo));
+
+            document.getElementById("registration-form").style.display = "none";
+            document.getElementById("content").style.display = "block";
+        };
+
+        function download(filename) {
+            const link = document.createElement('a');
+            link.href = filename; // Lien vers le fichier à télécharger
+            link.download = filename; // Nom du fichier
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+
+</body>
+</html>
