@@ -24,6 +24,7 @@ h1{
           }
 }
 h1 .box{
+     color: aliceblue;
 
     animation: fadeInUp 2s ease-in-out;
             font-size: 3rem;
