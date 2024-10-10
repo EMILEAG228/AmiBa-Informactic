@@ -6,25 +6,44 @@
 }
 h1{
     text-align: center;
-   // background-color: aqua;
-    text-decoration: solid;
-    text-shadow: none;
-    text-decoration: dashed;
-    text-transform: capitalize;
-    text-overflow: clip;
-    color: red;
-    border-radius: 8px;
-    overflow: hidden;
-      animation: fadeInUp 2s ease-in-out;
+    .animated-title {
+            animation: fadeInUp 2s ease-in-out;
             font-size: 3rem;
             text-align: center;
-    
+          }
+          
+          @keyframes fadeInUp {
+            from {
+              opacity: 0;
+              transform: translateY(50px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
 }
 h1 .box{
 
     animation: fadeInUp 2s ease-in-out;
             font-size: 3rem;
             text-align: center;
+      .animated-title {
+            animation: fadeInUp 2s ease-in-out;
+            font-size: 3rem;
+            text-align: center;
+          }
+          
+          @keyframes fadeInUp {
+            from {
+              opacity: 0;
+              transform: translateY(50px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
 }
 h1.al{
     color: red;
