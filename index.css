@@ -15,6 +15,9 @@ h1{
     color: red;
     border-radius: 8px;
     overflow: hidden;
+      animation: fadeInUp 2s ease-in-out;
+            font-size: 3rem;
+            text-align: center;
     
 }
 h1 .box{
@@ -28,7 +31,7 @@ h1.al{
     background-color: #fff;
 }
 .p{
-    background-image: url("3.jpg");width=34%;height=30%;
+    background-image: url("18.png");width=34%;height=30%;
 }
 h2{
     color: aliceblue;
@@ -38,7 +41,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 10vh;
- background-image: url("6.jpg");
+ background-image: url("16.jpg");
 }
 /* Style de base pour la navigation */
 nav {
