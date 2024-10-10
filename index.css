@@ -4,7 +4,11 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif ;
 }
+h1 .li{
+    color: aliceblue;
+}
 h1{
+    color: aliceblue;
     text-align: center;
     .animated-title {
             animation: fadeInUp 2s ease-in-out;
