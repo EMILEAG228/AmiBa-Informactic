@@ -3,75 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="shortcut icon" type="image/jpg" href="AmiBa.jpg">	
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="style.js">
     <title>Accueil</title>
 </head>
 <body>
     <header>
         <nav>
-            <ul>
+            <a href="#"><img class="logo" src="logo.png" alt="Logo"></a>
+            <ul class="menu">
                 <li><a href="#">Accueil</a></li>
-                <li><a href="irt1.html">Cours IRT1</a></li>
-                <li><a href="irt2.html">Cours IRT2</a></li>
-                <li><a href="c.html">Code Programmation C</a></li>
-                <li><a href="java.html">Code Programmation Java</a></li>
-                <li><a href="https://hey.link/Sh1yE">Contact</a></li>
+                <li><a href="https://emileag228.github.io/AmiBa-Informactic/irt1.html">Cours IRT1</a></li>
+                <li><a href="https://emileag228.github.io/AmiBa-Informactic/irt2.html">Cours IRT2</a></li>
+                <li><a href="https://emileag228.github.io/AmiBa-Informactic/c.html">Programmation C</a></li>
+                <li><a href="https://emileag228.github.io/AmiBa-Informactic/java.html">Programmation Java</a></li>
+                <li><a href="https://heylink.me/amiba/">Contact</a></li>
             </ul>
+            <!-- Menu icon that appears when the screen is small -->
+            <img class="menu-icon" src="menu.png" alt="Menu">
         </nav>
+    
+        <!-- Dropdown menu that appears when the icon is clicked -->
+        <div class="dropdown-menu">
+            <a href="#">Accueil</a>
+            <a href="https://emileag228.github.io/AmiBa-Informactic/irt1.html">Cours IRT1</a>
+            <a href="https://emileag228.github.io/AmiBa-Informactic/irt2.html">Cours IRT2</a>
+            <a href="https://emileag228.github.io/AmiBa-Informactic/c.html">Programmation C</a>
+            <a href="https://emileag228.github.io/AmiBa-Informactic/java.html">Programmation Java</a>
+            <a href="https://heylink.me/amiba/">Contact</a>
+        </div>
     </header>
+    
+        
+        <script>
+ // Menu hamburger pour petit écran
+const menuIcon = document.querySelector('.menu-icon');
+const dropdownMenu = document.querySelector('.dropdown-menu');
 
-    <br><br>
- <span>   <h1 class="box"><u>BIENVENU SUR NOTRE PAGE WEB</u></h1></span>
-    <br><br><br>  <br>
-            <br>
-    <div class="p">
-          <br>
-            <br>
-        <p  style="background-color:#0000;" ><h2>
-            Dans le but de se partager des connaissances en informatique fut la création de ce site web. 
-            Ce site web comprend des contenus legal et illegal. Donc vous serez responsable de vos Actes .
-              
-            <br>
+menuIcon.addEventListener('click', () => {
+    dropdownMenu.classList.toggle('active'); // Toggle l'état du menu déroulant
+});
 
-L'utilisation illégale des systèmes informatiques : un fléau du numérique
-
-L'essor des technologies numériques a considérablement facilité notre quotidien, mais il a également ouvert la voie à de nouvelles formes de criminalité. L'utilisation illégale des systèmes informatiques est devenue un véritable fléau, mettant en danger la sécurité des individus et des entreprises.
-
-Quelles sont les principales formes d'utilisation illégale ?
-
-Le piratage informatique : Il consiste à accéder sans autorisation à un système informatique. Les motivations peuvent être diverses : vol de données, sabotage, vandalisme...
-La création et la diffusion de logiciels malveillants : Les virus, les vers, les chevaux de Troie et autres logiciels malveillants sont conçus pour endommager des systèmes, voler des données ou prendre le contrôle d'ordinateurs à distance.
-Le phishing : Cette technique consiste à usurper l'identité d'une personne ou d'une organisation afin d'obtenir des informations confidentielles (identifiants de connexion, numéros de carte bancaire...).
-Le harcèlement en ligne : Le cyberharcèlement prend de nombreuses formes : insultes, menaces, diffusion de fausses informations... Il peut avoir des conséquences psychologiques graves pour les victimes.
-Le piratage de compte : Le piratage de comptes en ligne (réseaux sociaux, messagerie, etc.) permet aux cybercriminels d'usurper l'identité de leurs victimes et de commettre d'autres infractions.
+// Pour fermer le menu lorsque l'utilisateur clique en dehors
+document.addEventListener('click', (event) => {
+    if (!menuIcon.contains(event.target) && !dropdownMenu.contains(event.target)) {
+        dropdownMenu.classList.remove('active'); // Ferme le menu déroulant
+    }
+});
 
 
-            
-            <br>
-            <br>
-             <br>
+        </script>
 
+    <section class="text">
+        <h1 id="affichage" > </h1>
+        <p>Dans le but de se partager des connaissances en informatique fut la création de ce site web. Ce site web comprend des contenus legal et illegal. Donc vous serez responsable de vos Actes . 
+            <br><br>
+            La nouvelle version de l'application AmiBa sera très bientôt disponible.
+            Tout utilisateur utilisant la version actuelle de l'application AmiBa est convoqué d'actualiser son application dès depuis Novembre ou Consulté le site pour pourvoir télécharger la nouvelle version.
+        <br><br><br>
 
+        Cliquez maintenant sur le bouton Bleu pour télécharger la version actuelle de l'application.
 
-            
-        </h2></p>
-    </div>
-     <br><br>
-    <div>
-        <marquee behavior="" direction="right"><img src="7.jpg" alt=""></marquee>
-    </div>
-     <br>
-     <br>
-    <br>
-       
-
-
-       <div style="background-color:#0000;"  >
-
-<h1>    <marquee behavior="" direction="left"><h1 class="li" >Certains Contenus sont Payants </h3></marquee>  </h1>
+        </p>
+        <a href="#">Contact</a> 
+        <a href="https://emileag228.github.io/AmiBa.Web/" class="cv">Télécharger </a>
+    </section>
+    <div class="overlay">
 
     </div>
+ 
+
+
+
+    <script>
+        const phrases = [
+            "Bienvenue sur AmiBa Informatique",
+            "Apprenez à coder avec nous.",
+            "Télécharger les Cours d'Informatiques chez nous.",
+            "Merci de nous visiter."
+        ];
+    
+        const affichage = document.getElementById('affichage');
+        let phraseIndex = 0; // Index de la phrase actuelle
+        let lettreIndex = 0; // Index de la lettre actuelle
+        let currentPhrase = '';
+        
+        function afficherLettreParLettre() {
+            // Si on est à la fin de la phrase
+            if (lettreIndex < phrases[phraseIndex].length) {
+                currentPhrase += phrases[phraseIndex][lettreIndex]; // Ajout de la lettre courante
+                affichage.textContent = currentPhrase; // Mise à jour du contenu affiché
+                lettreIndex++;
+                setTimeout(afficherLettreParLettre, 100); // Attendre avant d'afficher la lettre suivante
+            } else {
+                setTimeout(reinitialiserPhrase, 2000); // Pause de 2 secondes avant de passer à la phrase suivante
+            }
+        }
+    
+        function reinitialiserPhrase() {
+            lettreIndex = 0;
+            currentPhrase = '';
+            phraseIndex++;
+            if (phraseIndex >= phrases.length) {
+                phraseIndex = 0; // Recommence à la première phrase
+            }
+            affichage.textContent = ''; // Efface l'affichage avant de commencer la nouvelle phrase
+            setTimeout(afficherLettreParLettre, 500); // Attendre 500ms avant de recommencer
+        }
+    
+        afficherLettreParLettre(); // Démarrer l'affichage
+    </script>
+
+
+
+
+    <!-- Zone de services -->
+<section class="services" style="background-color: brown;" >
+    <h2>Nos Services</h2>
+    <div class="service-container">
+        <div class="service-item">
+            <img src="developpeur.jpg" alt="Service 1">
+            <h3>Développement Web</h3>
+            <p>Nous offrons des services de développement web de haute qualité pour créer des sites modernes et performants.</p>
+        </div>
+        <div class="service-item">
+            <img src="it.jpg" alt="Service 2">
+            <h3>Consultation IT</h3>
+            <p>Nos experts vous guident dans la mise en place des meilleures solutions IT pour votre entreprise.</p>
+        </div>
+        <div class="service-item">
+            <img src="formation.jpg" alt="">
+            <h3>Formation en Programmation</h3>
+            <p>Apprenez à coder avec nos cours de programmation pour tous les niveaux.</p>
+        </div>
+        
+    <div class="service-container">
+        <div class="service-item">
+            <img src="electricite.jpg" alt="Service Électricité">
+            <h3>Électricité</h3>
+            <p>Nous proposons des solutions complètes en électricité pour répondre à vos besoins résidentiels et industriels.</p>
+        </div>
+        <div class="service-item">
+            <img src="reseau.jpg" alt="Service Câblage Réseau">
+            <h3>Câblage Réseau</h3>
+            <p>Nos services incluent l'installation et la maintenance de câblage réseau pour garantir une connectivité optimale.</p>
+        </div>
+    </div>
+
+
+    </div>
+</section>
+
+<!-- Footer avec Copyright -->
+<footer style="background-color: brown;">
+    <p class="footer"> <h3>&copy;2024 AmiBa Groupe. Tous droits réservés</h3>.</p>
+</footer>
+
+
+
+    
 </body>
 </html>
