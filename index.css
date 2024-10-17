@@ -303,6 +303,10 @@ nav ul li a:hover {
     padding: 20px;
 }
 .actualites-section h2 {
+      0% { background-color: rgb(82, 17, 17); }
+    33% { background-color: rgb(197, 189, 189); }
+    66% { background-color: rgb(25, 25, 85); }
+    100% { background-color: rgb(136, 43, 43); }
     margin-top: 0;
     text-align: center;
 }
