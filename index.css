@@ -303,7 +303,23 @@ nav ul li a:hover {
     padding: 15px;
     border-radius: 8px;
 }
-.news-item img, .news-item video {
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background-color: black;
+}
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+.news-item img {
     width: 100%;
     border-radius: 8px;
 }
@@ -318,4 +334,5 @@ nav ul li a:hover {
 .news-item .news-description p {
     margin: 5px 0;
 }
+
 
