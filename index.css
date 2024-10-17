@@ -1,200 +1,288 @@
-*{
-    margin:0;
-    padding: 0;
+*, *::before, *::after{
+    margin: 0%;
+    padding: 0%;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif ;
-}
-h1 .li{
-    color: aliceblue;
-}
-h1{
-    color: aliceblue;
-    text-align: center;
-    .animated-title {
-            animation: fadeInUp 2s ease-in-out;
-            font-size: 3rem;
-            text-align: center;
-          }
-          
-          @keyframes fadeInUp {
-            from {
-              opacity: 0;
-              transform: translateY(50px);
-            }
-            to {
-              opacity: 1;
-              transform: translateY(0);
-            }
-          }
-}
-h1 .box{
-     color: aliceblue;
-
-    animation: fadeInUp 2s ease-in-out;
-            font-size: 3rem;
-            text-align: center;
-      .animated-title {
-            animation: fadeInUp 2s ease-in-out;
-            font-size: 3rem;
-            text-align: center;
-          }
-          
-          @keyframes fadeInUp {
-            from {
-              opacity: 0;
-              transform: translateY(50px);
-            }
-            to {
-              opacity: 1;
-              transform: translateY(0);
-            }
-          }
-}
-
-h2{
-    color: aliceblue;
 }
 body{
-    //display : flex;
-    justify-content: center;
+    font-family: 'Tw Cen Mt';
+    font-size: 14px;
+}
+
+
+.overlay{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    width: 100%;
+    height: 100vh;
+    background: url('hack.jpg') center center no-repeat ;
+    background-size: cover;
+    z-index: -100;
+    
+}
+header{
+    max-width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+nav{
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    min-height: 10vh;
- background-image: url("16.jpg");
+    width: 100%;
+    padding: 30px 0 10px;
 }
-/* Style de base pour la navigation */
-nav {
-    background-color: #333; /* Couleur de fond */
-    color: #fff; /* Couleur du texte */
-    padding: 10px 0; /* Marge interne */
-    text-align: center; /* Aligner le texte au centre */
-}
-
-/* Style pour la liste non ordonnée */
-ul {
-    list-style: none; /* Supprimer les puces par défaut */
-    margin: 0; /* Supprimer la marge par défaut */
-    padding: 0; /* Supprimer le padding par défaut */
-}
-
-/* Style pour les éléments de la liste (liens) */
-li {
-    display: inline-block; /* Afficher les éléments en ligne */
-    margin-right: 20px; /* Marge entre les liens */
-}
-
-/* Style pour les liens (a) */
-a {
-    color: #fff; /* Couleur du texte */
-    text-decoration: none; /* Supprimer le soulignement par défaut */
-    font-weight: bold; /* Gras */
-}
-
-/* Style pour le lien actif (en survol) */
-a:hover {
-    color: #007bff; /* Couleur du texte en survol */
-}
-
-/* Style responsive pour les petits écrans */
-@media (max-width: 768px) {
-    nav {
-        text-align: left; /* Aligner le texte à gauche sur les petits écrans */
-    }
-
-    ul {
-        margin-bottom: 15px; /* Ajouter une marge inférieure sur les petits écrans */
-    }
-
-    li {
-        margin-right: 15px; /* Réduire la marge entre les liens sur les petits écrans */
-    }}
-.box{
-    border-radius: 8px;
-}
-@media queri{
+nav .logo{
+    width: 70px;
 
 }
-@media screen {
-    
+nav .menu-icon{
+    width: 60px;
+    cursor: pointer;
 }
-/* Style de base */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
+nav ul{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 40px;
 }
-
-header {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
-}
-
-nav ul {
+nav ul li{
     list-style: none;
-    padding: 0;
-    text-align: center;
-}
+    margin-left: 20px;
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
 }
-
-nav ul li a {
-    color: #fff;
+nav ul li a{
     text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: color .0.3s;
+}
+nav ul li a:hover {
+    color: blue;
+
+
+}
+.text{
+    padding: 70px;
+    color: #fff;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.text h1{
+    font-size: 75px;
+    line-height: 2;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+.text p{
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+}
+.text a{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.25rem;
+    border: 1px solid #2eb0f0;
+    color:#2eb0f0 ;
+    padding: 10px 20px;
+    margin-right: 30px;
+}
+.text a.cv{
+    color: #121212;
+    background-color: #2eb0f0;
+    font-weight: 600;
 }
 
-/* Styles pour le titre et le paragraphe */
-h1 {
-    text-align: center;
-    margin-top: 20px;
-}
 
-.p {
-    padding: 0 20px;
-}
 
-h2 {
-    text-align: center;
-    margin: 20px 0;
-}
-
-/* Marquee */
-marquee {
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-}
-
-/* Responsive */
+/* RESPONSIVE STYLES */
 @media (max-width: 768px) {
-    nav ul li {
-        display: block;
-        margin: 10px 0;
+    nav ul {
+        display: none; /* Cacher les liens dans la navigation par défaut sur petit écran */
     }
 
-    .p {
-        padding: 0 10px;
+    .menu-icon {
+        display: block; /* Montrer l'icône du menu hamburger */
     }
-    
-    h1, h2 {
-        font-size: 1.5em;
+
+    .text h1 {
+        font-size: 2rem;
     }
-    
-    marquee img {
-        max-width: 100%; /* Assure que l'image ne déborde pas */
-        height: auto;
+
+    .text p {
+        font-size: 0.9rem;
+    }
+
+    /* Menu déroulant */
+    nav.active ul {
+        display: block;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        text-align: center;
+    }
+
+    nav.active ul li {
+        display: block;
+        padding: 15px 0;
     }
 }
 
 @media (max-width: 480px) {
-    h1, h2 {
-        font-size: 1.2em;
+    .text h1 {
+        font-size: 1.5rem;
     }
-    
-    nav ul li {
-        margin: 5px 0;
+
+    .text p {
+        font-size: 0.8rem;
+    }
+
+    .text a {
+        padding: 8px 15px;
+    }
+
+    .logo {
+        max-width: 100px;
+    }
+}
+
+
+
+
+
+    /* Style pour la section services */
+    .services {
+        padding: 50px 20px;
+        background-color: #f5f5f5;
+        text-align: center;
+    }
+
+    .services h2 {
+        font-size: 2.5rem;
+        color: #333;
+        margin-bottom: 40px;
+    }
+
+    .service-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .service-item {
+        max-width: 300px;
+        background-color: white;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .service-item img {
+        max-width: 100%;
+        border-radius: 8px;
+    }
+
+    .service-item h3 {
+        font-size: 1.5rem;
+        margin: 15px 0;
+        color: #333;
+    }
+
+    .service-item p {
+        font-size: 1rem;
+        color: #666;
+    }
+
+    /* Style pour le footer */
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 15px 0;
+        margin-top: 40px;
+    }
+
+    footer p {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    /* Responsiveness */
+    @media (max-width: 768px) {
+        .service-container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .service-item {
+            max-width: 90%;
+            margin-bottom: 20px;
+        }
+    }
+    /* Animation du background de la section services */
+@keyframes changeBackground {
+    0% { background-color: rgb(82, 17, 17); }
+    33% { background-color: rgb(197, 189, 189); }
+    66% { background-color: rgb(25, 25, 85); }
+    100% { background-color: rgb(136, 43, 43); }
+}
+
+.services {
+    padding: 50px 20px;
+    text-align: center;
+    animation: changeBackground 6s infinite;
+}
+
+
+
+
+/* Styles de base pour le menu */
+.menu-icon {
+    display: none; /* Cacher l'icône du menu par défaut */
+    width: 30px;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none; /* Cacher le menu déroulant par défaut */
+    position: absolute;
+    background-color: #333; /* Fond du menu déroulant */
+    color: white;
+    z-index: 10; /* Assure que le menu est au-dessus */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.dropdown-menu a {
+    display: block; /* Lien en bloc pour le menu déroulant */
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f0a500; /* Couleur de survol */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Cacher le menu principal sur petit écran */
+    }
+
+    .menu-icon {
+        display: block; /* Afficher l'icône du menu sur petit écran */
+    }
+
+    .dropdown-menu.active {
+        display: block; /* Afficher le menu déroulant si actif */
     }
 }
