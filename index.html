@@ -1,178 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - AmiBa Groupe</title>
     <link rel="stylesheet" href="index.css">
     <link rel="shortcut icon" type="image/jpg" href="logo.png">
-    <title>Accueil</title>
 </head>
-<body style="background-color: rgb(66, 7, 7);" >
+<body style="background-color: rgb(66, 7, 7);">
     <header>
         <nav>
             <a href="#"><img class="logo" src="logo.png" alt="Logo"></a>
             <ul class="menu">
                 <li><a href="#">Accueil</a></li>
                 <li><a href="http://amiba.onlinewebshop.net/">AmiBa MarketPlace</a></li>
-              
-                 <li><a href="contact.html">Aide</a></li>
+                <li><a href="contact.html">Aide</a></li>
                 <li><a href="https://heylink.me/amiba/">Contact</a></li>
             </ul>
-            <!-- Menu icon that appears when the screen is small -->
             <img class="menu-icon" src="menu.png" alt="Menu">
         </nav>
-    
-        <!-- Dropdown menu that appears when the icon is clicked -->
+
         <div class="dropdown-menu">
             <a href="#">Accueil</a>
-       
-            <li><a href="contact.html">Aide</a></li>
+            <a href="contact.html">Aide</a>
             <a href="https://heylink.me/amiba/">Contact</a>
         </div>
     </header>
-    
-        
-        <script>
- // Menu hamburger pour petit écran
-const menuIcon = document.querySelector('.menu-icon');
-const dropdownMenu = document.querySelector('.dropdown-menu');
 
-menuIcon.addEventListener('click', () => {
-    dropdownMenu.classList.toggle('active'); // Toggle l'état du menu déroulant
-});
-
-// Pour fermer le menu lorsque l'utilisateur clique en dehors
-document.addEventListener('click', (event) => {
-    if (!menuIcon.contains(event.target) && !dropdownMenu.contains(event.target)) {
-        dropdownMenu.classList.remove('active'); // Ferme le menu déroulant
-    }
-});
-
-
-        </script>
-
-    <section class="text">
-        <h1 id="affichage" > </h1>
-        <p>"AmiBa est une application intelligente et polyvalente conçue pour centraliser les services numériques de l’entreprise AmiBa Groupe, offrant une plateforme intégrée de communication, de gestion de projets, de formation en ligne, et de solutions informatiques adaptées aux besoins des particuliers, des professionnels et des institutions, le tout dans une interface moderne, sécurisée et facile à utiliser." 
-            <br>
+    <section class="text" style="padding: 30px; color: white; text-align: center;">
+        <h1 id="affichage"></h1>
+        <p>
+            AmiBa est une application intelligente et polyvalente conçue pour centraliser les services numériques de l’entreprise AmiBa Groupe, offrant une plateforme intégrée de communication, de gestion de projets, de formation en ligne, et de solutions informatiques adaptées aux besoins des particuliers, des professionnels et des institutions, le tout dans une interface moderne, sécurisée et facile à utiliser.
+            <br><br>
             La nouvelle version de l'application AmiBa sera très bientôt disponible.
-            <br>
-
         </p>
-                                                                <a href="amiba.apk" class="cv">Télécharger </a>
-        </pre>
-    
-       
-
-
+        <a href="amiba.apk" class="cv" style="display: inline-block; margin-top: 15px; background: white; padding: 10px 20px; border-radius: 5px; color: brown; font-weight: bold; text-decoration: none;">Télécharger</a>
     </section>
-    <div class="overlay">
 
-    </div>
- 
+    <div class="overlay"></div>
 
+    <!-- Zone de services -->
+    <section class="services" style="background-color: brown; padding: 40px; color: white;">
+        <h2 style="text-align: center;">Nos Services</h2>
+        <div class="service-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+            <div class="service-item" style="width: 300px; background: #fff; color: #000; border-radius: 10px; padding: 15px;">
+                <img src="developpeur.jpg" alt="Développement Web" style="width: 100%; border-radius: 10px;">
+                <h3>Développement Web</h3>
+                <p>Nous offrons des services de développement web de haute qualité pour créer des sites modernes et performants.</p>
+            </div>
+            <div class="service-item" style="width: 300px; background: #fff; color: #000; border-radius: 10px; padding: 15px;">
+                <img src="it.jpg" alt="Consultation IT" style="width: 100%; border-radius: 10px;">
+                <h3>Consultation IT</h3>
+                <p>Nos experts vous guident dans la mise en place des meilleures solutions IT pour votre entreprise.</p>
+            </div>
+            <div class="service-item" style="width: 300px; background: #fff; color: #000; border-radius: 10px; padding: 15px;">
+                <img src="formation.jpg" alt="Formation Programmation" style="width: 100%; border-radius: 10px;">
+                <h3>Formation en Programmation</h3>
+                <p>Apprenez à coder avec nos cours de programmation pour tous les niveaux.</p>
+            </div>
+            <div class="service-item" style="width: 300px; background: #fff; color: #000; border-radius: 10px; padding: 15px;">
+                <img src="electricite.jpg" alt="Électricité" style="width: 100%; border-radius: 10px;">
+                <h3>Électricité</h3>
+                <p>Nous proposons des solutions complètes en électricité pour répondre à vos besoins résidentiels et industriels.</p>
+            </div>
+            <div class="service-item" style="width: 300px; background: #fff; color: #000; border-radius: 10px; padding: 15px;">
+                <img src="reseau.jpg" alt="Câblage Réseau" style="width: 100%; border-radius: 10px;">
+                <h3>Câblage Réseau</h3>
+                <p>Nos services incluent l'installation et la maintenance de câblage réseau pour garantir une connectivité optimale.</p>
+            </div>
+            <div class="service-item" style="width: 300px; background: #fff; color: #000; border-radius: 10px; padding: 15px;">
+                <img src="https://www.alarme-systeme.fr/images/headers/camera-videosurveillance-fond-bleu.jpg" alt="Caméras de surveillance" style="width: 100%; border-radius: 10px;">
+                <h3>Caméras de Surveillance</h3>
+                <p>Installation de caméras connectées en Wi-Fi pour renforcer la sécurité dans vos locaux.</p>
+            </div>
+        </div>
+    </section>
 
+    <footer style="background-color: brown; color: white; text-align: center; padding: 20px;">
+        <h3>&copy; 2025 AmiBa Groupe. Tous droits réservés.</h3>
+    </footer>
 
+    <!-- JS du menu responsive -->
+    <script>
+        const menuIcon = document.querySelector('.menu-icon');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+
+        menuIcon.addEventListener('click', () => {
+            dropdownMenu.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!menuIcon.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.classList.remove('active');
+            }
+        });
+    </script>
+
+    <!-- JS pour afficher les phrases une par une -->
     <script>
         const phrases = [
-            "Chez AmiBa Informatique, chaque ligne de code est une solution pour bâtir un avenir numérique plus intelligent et accessible",
+            "Chez AmiBa Informatique, chaque ligne de code est une solution pour bâtir un avenir numérique plus intelligent et accessible.",
             "Nous croyons qu’à travers la technologie, AmiBa Informatique peut transformer les idées en innovations concrètes au service de la communauté.",
-            "AmiBa Informatique s’engage à former des esprits brillants et passionnés capables de relever les défis technologiques de demain."
-            "Avec AmiBa Informatique, l’informatique devient un levier puissant pour créer, apprendre et entreprendre sans limites "
-            "Notre motivation chez AmiBa Informatique, c’est de connecter les talents, les outils et les visions pour faire du numérique une force de développement. "
-            " Merci Pour Votre Visite. AmiBa Groupe"
+            "AmiBa Informatique s’engage à former des esprits brillants et passionnés capables de relever les défis technologiques de demain.",
+            "Avec AmiBa Informatique, l’informatique devient un levier puissant pour créer, apprendre et entreprendre sans limites.",
+            "Notre motivation chez AmiBa Informatique, c’est de connecter les talents, les outils et les visions pour faire du numérique une force de développement.",
+            "Merci pour votre visite. AmiBa Groupe."
         ];
-    
+
         const affichage = document.getElementById('affichage');
-        let phraseIndex = 0; // Index de la phrase actuelle
-        let lettreIndex = 0; // Index de la lettre actuelle
+        let phraseIndex = 0;
+        let lettreIndex = 0;
         let currentPhrase = '';
-        
+
         function afficherLettreParLettre() {
-            // Si on est à la fin de la phrase
             if (lettreIndex < phrases[phraseIndex].length) {
-                currentPhrase += phrases[phraseIndex][lettreIndex]; // Ajout de la lettre courante
-                affichage.textContent = currentPhrase; // Mise à jour du contenu affiché
+                currentPhrase += phrases[phraseIndex][lettreIndex];
+                affichage.textContent = currentPhrase;
                 lettreIndex++;
-                setTimeout(afficherLettreParLettre, 100); // Attendre avant d'afficher la lettre suivante
+                setTimeout(afficherLettreParLettre, 50);
             } else {
-                setTimeout(reinitialiserPhrase, 2000); // Pause de 2 secondes avant de passer à la phrase suivante
+                setTimeout(reinitialiserPhrase, 2000);
             }
         }
-    
+
         function reinitialiserPhrase() {
             lettreIndex = 0;
             currentPhrase = '';
-            phraseIndex++;
-            if (phraseIndex >= phrases.length) {
-                phraseIndex = 0; // Recommence à la première phrase
-            }
-            affichage.textContent = ''; // Efface l'affichage avant de commencer la nouvelle phrase
-            setTimeout(afficherLettreParLettre, 500); // Attendre 500ms avant de recommencer
+            phraseIndex = (phraseIndex + 1) % phrases.length;
+            affichage.textContent = '';
+            setTimeout(afficherLettreParLettre, 500);
         }
-    
-        afficherLettreParLettre(); // Démarrer l'affichage
+
+        afficherLettreParLettre();
     </script>
-
-
-
-
-    <!-- Zone de services -->
-<section class="services" style="background-color: brown;" >
-    <h2>Nos Services</h2>
-    <div class="service-container">
-        <div class="service-item">
-            <img src="developpeur.jpg" alt="Service 1">
-            <h3>Développement Web</h3>
-            <p>Nous offrons des services de développement web de haute qualité pour créer des sites modernes et performants.</p>
-        </div>
-        <div class="service-item">
-            <img src="it.jpg" alt="Service 2">
-            <h3>Consultation IT</h3>
-            <p>Nos experts vous guident dans la mise en place des meilleures solutions IT pour votre entreprise.</p>
-        </div>
-        <div class="service-item">
-            <img src="formation.jpg" alt="">
-            <h3>Formation en Programmation</h3>
-            <p>Apprenez à coder avec nos cours de programmation pour tous les niveaux.</p>
-        </div>
-        
-    <div class="service-container">
-        <div class="service-item">
-            <img src="electricite.jpg" alt="Service Électricité">
-            <h3>Électricité</h3>
-            <p>Nous proposons des solutions complètes en électricité pour répondre à vos besoins résidentiels et industriels.</p>
-        </div>
-        <div class="service-item">
-            <img src="reseau.jpg" alt="Service Câblage Réseau">
-            <h3>Câblage Réseau</h3>
-            <p>Nos services incluent l'installation et la maintenance de câblage réseau pour garantir une connectivité optimale.</p>
-        </div>
-        <div class="service-item">
-            <img src="https://www.alarme-systeme.fr/images/headers/camera-videosurveillance-fond-bleu.jpg" alt="Service Câblage Réseau">
-            <h3>Installation des Cameras De Surveillance</h3>
-            <p>Nous procédons actuellement à l'installation de caméras de surveillance connectées en Wi-Fi dans nos locaux pour renforcer la sécurité. Merci de votre compréhension.
-– L’équipe AmiBa Groupe.</p>
-        </div>
-    </div>
-
-
-    </div>
-</section>
-
-
-
-
-<!-- Footer avec Copyright -->
-<footer style="background-color: brown;">
-  
-    <p class="footer"> <h3>&copy;2025 AmiBa Groupe. Tous droits réservés</h3></p>
-
-  
-</footer>
-      
-
-
-    
 </body>
 </html>
