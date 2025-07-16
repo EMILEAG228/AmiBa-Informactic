@@ -4,17 +4,177 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil - AmiBa Groupe</title>
-    <link rel="stylesheet" href="index.css">
     <link rel="shortcut icon" type="image/jpg" href="logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(-45deg, #8e2de2, #4a00e0, #ff416c, #ff4b2b);
+            background-size: 400% 400%;
+            animation: gradientBG 20s ease infinite;
+            color: white;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        header nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .logo {
+            width: 50px;
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .menu li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .menu li a:hover {
+            color: #00ffd0;
+        }
+
+        .menu-icon {
+            width: 30px;
+            cursor: pointer;
+            display: none;
+        }
+
+        .dropdown-menu {
+            display: none;
+            flex-direction: column;
+            background-color: rgba(0, 0, 0, 0.9);
+            position: absolute;
+            top: 70px;
+            right: 20px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .dropdown-menu.active {
+            display: flex;
+        }
+
+        .dropdown-menu a {
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            border-bottom: 1px solid #444;
+        }
+
+        .text {
+            padding: 40px 20px;
+            text-align: center;
+            animation: fadeIn 2s;
+        }
+
+        .cv {
+            display: inline-block;
+            background: #fff;
+            color: #620505;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .cv:hover {
+            background: #00ffd0;
+            color: #000;
+        }
+
+        .services {
+            padding: 60px 20px;
+            background-color: rgba(0,0,0,0.3);
+        }
+
+        .services h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.2rem;
+        }
+
+        .service-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .service-item {
+            width: 300px;
+            background: white;
+            color: #000;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .service-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-item img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background: rgba(0,0,0,0.6);
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .menu {
+                display: none;
+            }
+            .menu-icon {
+                display: block;
+            }
+        }
+    </style>
 </head>
-<body style="background-color: rgb(66, 7, 7);">
+<body>
     <header>
         <nav>
             <a href="#"><img class="logo" src="logo.png" alt="Logo"></a>
             <ul class="menu">
                 <li><a href="#">Accueil</a></li>
                 <li><a href="http://amiba.onlinewebshop.net/">AmiBa MarketPlace</a></li>
-                 <li><a href="https://emileag228.github.io/liveFootTv/">Live Foot Tv</a></li>
+                <li><a href="https://emileag228.github.io/liveFootTv/">Live Foot Tv</a></li>
                 <li><a href="contact.html">Aide</a></li>
                 <li><a href="https://heylink.me/amiba/">Contact</a></li>
             </ul>
@@ -23,70 +183,63 @@
 
         <div class="dropdown-menu">
             <a href="#">Accueil</a>
-             <li><a href="http://amiba.onlinewebshop.net/">AmiBa MarketPlace</a></li>
-             <li><a href="https://emileag228.github.io/liveFootTv/">Live Foot Tv</a></li>
+            <a href="http://amiba.onlinewebshop.net/">AmiBa MarketPlace</a>
+            <a href="https://emileag228.github.io/liveFootTv/">Live Foot Tv</a>
             <a href="contact.html">Aide</a>
             <a href="https://heylink.me/amiba/">Contact</a>
         </div>
     </header>
 
-    <section class="text" style="padding: 30px; color: white; text-align: center;">
-        <h1 id="affichage" style="font-size: 30px; color: white; text-align: center;"></h1>
-             <br><br>
-
+    <section class="text">
+        <h1 id="affichage" style="font-size: 28px;"></h1>
         <p>
-            AmiBa est une application intelligente et polyvalente conçue pour centraliser les services numériques de l’entreprise AmiBa Groupe, offrant une plateforme intégrée de communication, de gestion de projets, de formation en ligne, et de solutions informatiques adaptées aux besoins des particuliers, des professionnels et des institutions, le tout dans une interface moderne, sécurisée et facile à utiliser.
-            <br><br>     <br><br>
-            La nouvelle version de l'application AmiBa maintenant disponible.
+            AmiBa est une application intelligente et polyvalente conçue pour centraliser les services numériques de l’entreprise AmiBa Groupe, offrant une plateforme intégrée de communication, de gestion de projets, de formation en ligne, et de solutions informatiques adaptées aux besoins des particuliers, des professionnels et des institutions.
+            <br><br>La nouvelle version de l'application AmiBa est maintenant disponible.
         </p>
-             <br><br>
-        <a href="amiba.apk" class="cv" style="display: inline-block; margin-top: 15px; background: white; padding: 10px 20px; border-radius: 5px; color: brown; font-weight: bold; text-decoration: none;">Télécharger</a>
+        <br>
+        <a href="amiba.apk" class="cv">Télécharger</a>
     </section>
 
-    <div class="overlay"></div>
-
-    <!-- Zone de services -->
-    <section class="services" style="background-color: brown; padding: 40px; color: white;">
-        <h2 style="text-align: center;">Nos Services</h2>
-        <div class="service-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
-            <div class="service-item" style="width: 300px; background: #fff; color: #000; border-radius: 10px; padding: 15px;">
-                <img src="developpeur.jpg" alt="Développement Web" style="width: 100%; border-radius: 10px;">
+    <section class="services">
+        <h2>Nos Services</h2>
+        <div class="service-container">
+            <div class="service-item">
+                <img src="developpeur.jpg" alt="Développement Web">
                 <h3>Développement Web</h3>
-                <p>Nous offrons des services de développement web de haute qualité pour créer des sites modernes et performants.</p>
+                <p>Sites modernes et performants adaptés à vos besoins.</p>
             </div>
-            <div class="service-item" style="width: 300px; background: #fff; color: #000; border-radius: 10px; padding: 15px;">
-                <img src="it.jpg" alt="Consultation IT" style="width: 100%; border-radius: 10px;">
+            <div class="service-item">
+                <img src="it.jpg" alt="Consultation IT">
                 <h3>Consultation IT</h3>
-                <p>Nos experts vous guident dans la mise en place des meilleures solutions IT pour votre entreprise.</p>
+                <p>Conseils stratégiques pour vos projets informatiques.</p>
             </div>
-            <div class="service-item" style="width: 300px; background: #fff; color: #000; border-radius: 10px; padding: 15px;">
-                <img src="formation.jpg" alt="Formation Programmation" style="width: 100%; border-radius: 10px;">
+            <div class="service-item">
+                <img src="formation.jpg" alt="Formation Programmation">
                 <h3>Formation en Programmation</h3>
-                <p>Apprenez à coder avec nos cours de programmation pour tous les niveaux.</p>
+                <p>Apprenez à coder du niveau débutant à avancé.</p>
             </div>
-            <div class="service-item" style="width: 300px; background: #fff; color: #000; border-radius: 10px; padding: 15px;">
-                <img src="electricite.jpg" alt="Électricité" style="width: 100%; border-radius: 10px;">
+            <div class="service-item">
+                <img src="electricite.jpg" alt="Électricité">
                 <h3>Électricité</h3>
-                <p>Nous proposons des solutions complètes en électricité pour répondre à vos besoins résidentiels et industriels.</p>
+                <p>Installation et maintenance électrique de qualité.</p>
             </div>
-            <div class="service-item" style="width: 300px; background: #fff; color: #000; border-radius: 10px; padding: 15px;">
-                <img src="reseau.jpg" alt="Câblage Réseau" style="width: 100%; border-radius: 10px;">
+            <div class="service-item">
+                <img src="reseau.jpg" alt="Câblage Réseau">
                 <h3>Câblage Réseau</h3>
-                <p>Nos services incluent l'installation et la maintenance de câblage réseau pour garantir une connectivité optimale.</p>
+                <p>Installation réseau pour entreprises et domiciles.</p>
             </div>
-            <div class="service-item" style="width: 300px; background: #fff; color: #000; border-radius: 10px; padding: 15px;">
-                <img src="https://www.alarme-systeme.fr/images/headers/camera-videosurveillance-fond-bleu.jpg" alt="Caméras de surveillance" style="width: 100%; border-radius: 10px;">
+            <div class="service-item">
+                <img src="https://www.alarme-systeme.fr/images/headers/camera-videosurveillance-fond-bleu.jpg" alt="Caméras de surveillance">
                 <h3>Caméras de Surveillance</h3>
-                <p>Installation de caméras connectées en Wi-Fi pour renforcer la sécurité dans vos locaux.</p>
+                <p>Sécurité intelligente via caméras Wi-Fi connectées.</p>
             </div>
         </div>
     </section>
 
-    <footer style="background-color: brown; color: white; text-align: center; padding: 20px;">
+    <footer>
         <h3>&copy; 2025 AmiBa Groupe. Tous droits réservés.</h3>
     </footer>
 
-    <!-- JS du menu responsive -->
     <script>
         const menuIcon = document.querySelector('.menu-icon');
         const dropdownMenu = document.querySelector('.dropdown-menu');
@@ -100,10 +253,7 @@
                 dropdownMenu.classList.remove('active');
             }
         });
-    </script>
 
-    <!-- JS pour afficher les phrases une par une -->
-    <script>
         const phrases = [
             "Chez AmiBa Informatique, chaque ligne de code est une solution pour bâtir un avenir numérique plus intelligent et accessible.",
             "Nous croyons qu’à travers la technologie, AmiBa Informatique peut transformer les idées en innovations concrètes au service de la communauté.",
